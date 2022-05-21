@@ -7,22 +7,16 @@
       "id": 1
     },
     {
-      "email": "alex@alex",
-      "password": "$2a$10$GKJP3Cfxk745e6wotBLxjOJZiD0DOyzC5Psc7LsDNTTA7VL3ioS/O",
-      "nome": "alex",
+      "email": "macasucci@yahoo.it",
+      "password": "$2a$10$Un7IgvkFwRHwavld30YzGOndst/hNE8//G4kzOdzUSsTRrkY/8DnG",
+      "nome": "magda",
       "id": 2
     },
     {
-      "email": "mamma@mamma",
-      "password": "$2a$10$aWYxoSux19gVBKH3bbeLxuP2o.0hTSLSEm7vJmO/PPJ21ppbF9N9a",
-      "nome": "Mamma",
+      "email": "alex@alex",
+      "password": "$2a$10$ny6AXDv8s1pQWiMfA5.t/.pQ1xzDh8w2Z43u7nhC8hB6y6p89W6qW",
+      "nome": "alex",
       "id": 3
-    },
-    {
-      "email": "nat@nat",
-      "password": "$2a$10$3r5I6ilVzTtVEzAEOZQeZenjdK2TSv0qp5.ac0yG7acsD6yDHzApO",
-      "nome": "nat",
-      "id": 4
     }
   ],
   "favorites": [
@@ -35,6 +29,11 @@
       "userId": 1,
       "movieId": 460465,
       "id": 5
+    },
+    {
+      "userId": 2,
+      "movieId": 634528,
+      "id": 8
     }
   ],
   "genres": [

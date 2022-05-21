@@ -27,7 +27,6 @@ export class AuthService {
   }
 
   logIn(user:{ email: string; password: string }){
-    console.log(user);
      return this.http.post<Authdata>(this.apiURL+'login',user).pipe(
        tap((user)=>{
          this.utenteSub.next(user);

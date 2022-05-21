@@ -21,16 +21,27 @@ export class MoviesComponent implements OnInit {
      })
   }
 
-  addFav(movie:DashMovie){
-     this.movieSrv.addFavorite(movie);
-     movie.fav=true;
+  async addFav(movie:DashMovie){
+    try{
+      await (await this.movieSrv.addFavorite(movie)).toPromise();
+      movie.fav=true;
+    }catch(err){
+       console.log(err);
+    }
+
+
   }
 
-  removeFav(movie:DashMovie){
-    if (movie.favId!==undefined){
-      this.movieSrv.removeFavorite(movie.favId);
+  async removeFav(movie:DashMovie){
+    try{
+      if (movie.favId!==undefined){
+         this.movieSrv.removeFavorite(movie.favId).toPromise();
+      }
+       movie.fav=false;
+
+    }catch(err){
+
     }
-     movie.fav=false;
   }
 
 
