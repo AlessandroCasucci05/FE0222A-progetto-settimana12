@@ -1,0 +1,23 @@
+
+  <div class="container">
+    <div class="example-container">
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin();">
+        <h2>Login</h2>
+        <mat-form-field>
+        <mat-label>Email </mat-label>
+        <input formControlName="email" matInput type="email">
+        <p *ngIf="email?.invalid && email?.touched">Inserire una mail valida</p>
+      </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password </mat-label>
+        <input formControlName="password" matInput type="password">
+        <p *ngIf="password?.invalid && password?.touched">Password mancante</p>
+        </mat-form-field>
+      <button [disabled]="loginForm.invalid" type="submit" mat-raised-button color="primary">Accedi</button>
+    </form>
+    <span>Non hai un account? <a href="" [routerLink]="['/register']">Registrati</a> </span>
+    </div>
+  </div>
+
+
+

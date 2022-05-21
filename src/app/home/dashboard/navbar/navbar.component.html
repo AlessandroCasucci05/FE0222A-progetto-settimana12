@@ -1,0 +1,18 @@
+<main>
+
+  <nav>
+    <div class="header">
+      <h3>Menu</h3>
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Movies</a></li>
+        <li><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
+      </ul>
+    </div>
+    <div class="footer">
+      <button (click)="logOut()">LogOut</button>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+</main>

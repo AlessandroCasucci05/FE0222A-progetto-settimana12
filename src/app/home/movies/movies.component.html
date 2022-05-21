@@ -1,0 +1,13 @@
+<header>
+  <h1>Movies</h1>
+</header>
+
+<section>
+  <div *ngFor="let card of movies" class="card">
+    <div class="card-poster"><img src="{{posterURL+card.movie.poster_path}}"></div>
+    <div *ngIf="!card.fav" (click)="addFav(card)" class="card-footer"> Mi piace </div>
+    <div *ngIf="card.fav" (click)="removeFav(card)" class="card-footer liked"> Non mi piace </div>
+  </div>
+</section>
+
+

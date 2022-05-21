@@ -1,0 +1,26 @@
+
+<div class="container">
+  <div class="example-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onRegister();">
+      <h2>SignUp</h2>
+    <mat-form-field>
+      <mat-label>Nome </mat-label>
+      <input formControlName="nome" matInput>
+      <p *ngIf="nome?.invalid && nome?.touched">Inserire Nome!</p>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email </mat-label>
+      <input formControlName="email" matInput type="email">
+      <p *ngIf="email?.invalid && email?.touched">Inserire una mail valida</p>
+    </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password </mat-label>
+      <input formControlName="password" matInput type="password">
+      <p *ngIf="password?.invalid && password?.touched">Password mancante</p>
+      </mat-form-field>
+    <button [disabled]="loginForm.invalid" type="submit" mat-raised-button color="primary">Registrati</button>
+  </form>
+  <span>Sei già registrato? <a href="" [routerLink]="['/login']">Accedi ora</a> </span>
+  </div>
+
+</div>
